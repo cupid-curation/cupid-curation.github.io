@@ -91,6 +91,7 @@
             <span class="author-block">
               <a href="http://yjy0625.github.io/">Jingyun Yang</a><sup>1</sup>,
             </span>
+            <br>
             <span class="author-block">
               <a href="https://contactrika.github.io/">Rika Antonova</a><sup>2</sup>,
             </span>
@@ -111,8 +112,8 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Stanford University,</span>
             <span class="author-block"><sup>2</sup>University of Cambridge,</span>
-            <span class="author-block"><sup>2</sup>NVIDIA Research,</span>
-            <span class="author-block"><sup>2</sup>Toyota Research Institute</span>
+            <span class="author-block"><sup>3</sup>NVIDIA Research,</span>
+            <span class="author-block"><sup>4</sup>Toyota Research Institute</span>
           </div>
 
           <div class="column has-text-centered">
@@ -165,6 +166,7 @@
   </div>
 </section>
 
+<!-- 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -177,10 +179,24 @@
       </h2>
     </div>
   </div>
+</section> -->
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <a href="./static/images/method_figure.png" target="_blank">
+        <img src="./static/images/method_figure.png" alt="CUPID Paper Teaser" style="max-width:100%; height:auto; display:block; margin:0 auto;">
+      </a>
+      <h2 class="subtitle has-text-centered">
+        We propose a data curation method for robot imitation learning that uses influence functions to measure the causal impact of a demonstration on the policy's closed-loop performance.
+      </h2>
+    </div>
+  </div>
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -235,7 +251,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -246,20 +262,26 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In robot imitation learning, policy performance is tightly coupled with the quality and composition of the demonstration data.
-            Yet, developing a precise understanding of how individual demonstrations contribute to downstream outcomes---such as closed-loop task success or failure---remains a persistent challenge.
-            Inspired by the theory of influence functions, we propose CUPID. Given a set of evaluation rollouts, CUPID estimates the influence of a training demonstration on the policy's expected return.
-            This enables ranking and selection of demonstrations according to their impact on the policy's closed-loop performance.
-            We use our estimator to curate data by 1) filtering out training demonstrations that harmed the policy's performance and 2) subselecting newly collected trajectories that will most help improve the policy. 
-            Extensive simulated and hardware experiments show that our approach consistently identifies which data drives test-time performance.
-            For example, training with less than 33\% of curated data can result in state-of-the-art diffusion policies on the simulated Robomimic benchmark, and we observe similar improvements in hardware experiments.
-            Furthermore, our hardware experiments show that our influence-based estimator can identify robust strategies under distribution shift, isolate spurious correlations, and even enhance post-training of generalist policies.
+            In robot imitation learning, policy performance is tightly coupled with the quality and composition of the demonstration data. 
+            Yet developing a precise understanding of how individual demonstrations contribute to downstream outcomes – such as closed-loop task success or failure – remains a persistent challenge. 
+            We propose CUPID, a robot data curation method based on a novel influence function-theoretic formulation for imitation learning policies. 
+            Given a set of evaluation rollouts, CUPID estimates the influence of each training demonstration on the policy’s expected return. 
+            This enables ranking and selection of demonstrations according to their impact on the policy’s closed-loop performance. 
+            We use CUPID to curate data by 1) filtering out training demonstrations that harm policy performance and 2) subselecting newly collected trajectories that will most improve the policy. 
+            Extensive simulated and hardware experiments show that our approach consistently identifies which data drives test-time performance. 
+            For example, training with less than 33% of curated data can yield state-of-the-art diffusion policies on the simulated Robomimic benchmark, with similar gains observed in hardware. 
+            Furthermore, hardware experiments show that our method can identify robust strategies under distribution shift, isolate spurious correlations, and even enhance the post-training of generalist robot policies.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -345,11 +367,11 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{agia2025cupid,
-  author    = {Agia, Christopher and Sinha, Rohan and Yang, Jingyun and Antonova, Rika and Pavone, Marco and Nishimura, Haruki and Itkina, Masha and Bohg, Jeannette},
-  title     = {CUPID: Curating Data Your Robot Loves with Influence Functions},
-  journal   = {arXiv},
-  year      = {2025},
-}</code></pre>
+    author    = {Agia, Christopher and Sinha, Rohan and Yang, Jingyun and Antonova, Rika and Pavone, Marco and Nishimura, Haruki and Itkina, Masha and Bohg, Jeannette},
+    title     = {CUPID: Curating Data Your Robot Loves with Influence Functions},
+    journal   = {arXiv},
+    year      = {2025},
+  }</code></pre>
   </div>
 </section>
 
