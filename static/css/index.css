@@ -19,7 +19,7 @@ body {
 
 
 .teaser .hero-body {
-  padding-top: 0;
+  padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
@@ -154,4 +154,127 @@ body {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+
+/* ============== Hero Color Gradient ============== */
+
+.hero-bg {
+  background: linear-gradient(
+    90deg,
+    #fb8b24 0%,
+    #ffffff 50%,
+    #4caf50 100%
+  );
+  filter: blur(30px);
+  opacity: 0.2;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+}
+
+.hero-section-with-bg {
+  position: relative;
+  overflow: hidden; /* prevent background from affecting other sections */
+}
+
+/* ============== TLDR Section ============== */
+
+.tldr-section {
+  background-color: #f5f5f5;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.tldr-box {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tldr-title {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.tldr-text {
+  font-size: 1.2rem;
+  font-family: 'Noto Sans', sans-serif;
+  color: #333;
+}
+
+
+/* ============== Custom Division Blocks. ============== */
+
+.video-block {
+  margin-top: 3.0rem;  
+}
+
+.abstract-block {
+  margin-top: 3.0rem;  
+}
+
+.approach-block {
+  border-top: 1px solid #ddd;
+  margin-top: 6.0rem;  
+  padding-top: 3.0rem;
+  padding-bottom: 3.0rem;
+}
+
+.experiments-block {
+  margin-top: 1.0rem;
+}
+
+/* ============== Buttons. ============== */
+
+.toggle-button {
+  background-color: #f0f0f0;
+  border: 0px solid #ccc;
+  color: #333;
+  font-size: 0.9rem;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  font-weight: 500;
+}
+
+.toggle-button:hover {
+  background-color: #e2e2e2;
+}
+
+.toggle-button.is-selected {
+  background-color: #d6d6d6;
+  font-weight: 600;
+}
+
+/* ============== Crop Videos. ============== */
+
+.video-crop-container {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.video-cropped {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-cropped.figure8 {
+  object-position: center 65%;
+}
+
+.video-cropped.tuckbox {
+  object-position: center center;
+}
+
+.video-cropped.bookshelf {
+  object-position: center center;
 }

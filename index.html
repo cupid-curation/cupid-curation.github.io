@@ -39,9 +39,15 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
 </head>
+
 <body>
 
+
+<!-- Navigation bar -->
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -77,12 +83,15 @@
 </nav>
 
 
-<section class="hero">
+<section class="hero hero-section-with-bg">
+  <div class="hero-bg"></div>
   <div class="hero-body">
+
+    <!-- Paper links -->
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">CUPID: Curating Data your Robot Loves with Influence Functions</h1>
+          <h1 class="title is-1 publication-title">CUPID: Curating Data your Robot Loves 💘<br>with Influence Functions</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://www.chrisagia.com/">Christopher Agia</a><sup>1</sup>,</span>
@@ -158,42 +167,99 @@
                   </a>
               </span>
             </div>
-
           </div>
         </div>
       </div>
     </div>
+
+    <!-- CUPID GIF. -->
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="./static/gifs/walkthrough.gif" alt="CUPID Walkthrough GIF"
+            style="max-width:100%; height:auto; display:block; margin:0 auto 0rem auto; border-radius:10px;">
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- 
-<section class="hero teaser">
+
+<!-- TLDR. -->
+<section class="tldr-section">
+  <div class="container is-max-desktop">
+    <div class="tldr-box">
+      <h2 class="tldr-title">TL;DR</h2>
+      <p class="tldr-text">
+        CUPID is a data curation method for robot imitation learning that uses influence functions to measure the causal impact of a demonstration on the policy's closed-loop performance. 
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Video & Abstract. -->
+<section class="section hero-section-with-bg">
+  <div class="hero-bg"></div>
+
+  <!-- Video. -->
+  <div class="container is-max-desktop video-block">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Abstract. -->
+  <div class="container is-max-desktop abstract-block">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In robot imitation learning, policy performance is tightly coupled with the quality and composition of the demonstration data. 
+            Yet developing a precise understanding of how individual demonstrations contribute to downstream outcomes – such as closed-loop task success or failure – remains a persistent challenge. 
+            We propose CUPID, a robot data curation method based on a novel influence function-theoretic formulation for imitation learning policies. 
+            Given a set of evaluation rollouts, CUPID estimates the influence of each training demonstration on the policy’s expected return. 
+            This enables ranking and selection of demonstrations according to their impact on the policy’s closed-loop performance. 
+            We use CUPID to curate data by 1) filtering out training demonstrations that harm policy performance and 2) subselecting newly collected trajectories that will most improve the policy. 
+            Extensive simulated and hardware experiments show that our approach consistently identifies which data drives test-time performance. 
+            For example, training with less than 33% of curated data can yield state-of-the-art diffusion policies on the simulated Robomimic benchmark, with similar gains observed in hardware. 
+            Furthermore, hardware experiments show that our method can identify robust strategies under distribution shift, isolate spurious correlations, and even enhance the post-training of generalist robot policies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Approach. -->
+  <div class="container is-max-desktop approach-block">
+      <h2 class="title is-3">Approach</h2>
+      <img src="./static/images/method.png" alt="CUPID Method Overview" style="max-width:100%; height:auto; display:block; margin:0 auto;">
+      <h2 class="subtitle has-text-centered">
+        We propose a data curation method for robot imitation learning that uses influence functions to measure the causal impact of a demonstration on the policy's closed-loop performance.
+      </h2>
+  </div>
+
+</section>
+
+
+<!-- Teaser figure -->
+<!-- <section class="hero teaser hero-section-with-bg">
+  <div class="hero-bg"></div>
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img src="./static/images/teaser.png" alt="CUPID Method Teaser" style="max-width:100%; height:auto; display:block; margin:0 auto;">
       <h2 class="subtitle has-text-centered">
         We propose a data curation method for robot imitation learning that uses influence functions to measure the causal impact of a demonstration on the policy's closed-loop performance.
       </h2>
     </div>
   </div>
 </section> -->
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <a href="./static/images/method_figure.png" target="_blank">
-        <img src="./static/images/method_figure.png" alt="CUPID Paper Teaser" style="max-width:100%; height:auto; display:block; margin:0 auto;">
-      </a>
-      <h2 class="subtitle has-text-centered">
-        We propose a data curation method for robot imitation learning that uses influence functions to measure the causal impact of a demonstration on the policy's closed-loop performance.
-      </h2>
-    </div>
-  </div>
-</section>
 
 
 <!-- <section class="hero is-light is-small">
@@ -254,56 +320,214 @@
 </section> -->
 
 
-<section class="section">
+
+<!-- Main Robot Results. -->
+<section class="section experiments-block">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+    <h2 class="title is-3">Robot Experiments</h2>
+    
+    <!-- Diffusion Policy Performance. -->
+    <div class="content">
+      <h3 class="title is-5">Improving Diffusion Policies by Debugging Training Data</h3>
+      <img src="./static/images/franka_image_dp_performance.jpg" alt="Franka Diffusion Policy Performance" style="max-width:100%; height:auto; display:block; margin:0;">
+      <img src="./static/images/hardware_tasks_annotated.jpg" alt="Franka Hardware Tasks" style="max-width:100%; height:auto; display:block; margin-top:4px; margin-bottom:8px;">
+      <p>
+        <strong>Franka real-world diffusion policy performance.</strong> 
+        CUPID, which curates demonstrations <em>w.r.t.</em> policy performance, improves success rates on mixed-quality datasets, identifies robust strategies, and disentangles 
+        spurious correlations that hinder performance. Although quality measures (e.g., DemInf, CUPID-Quality) help in mixed-quality settings (Figure-8), they degrade performance 
+        when higher-quality demonstrations induce brittle strategies at test time (TuckBox), or when quality is not the primary factor limiting policy success (Bookshelf). 
+        Overall, curating data based on performance (CUPID) maintains robustness across these settings. 
+      </p>
+    </div>
+
+    <!-- PI-0 Transfer Performance. -->
+    <h3 class="title is-5">Curated Post-Training for Vision-Language-Action (VLA) Models</h3>
+    <div class="columns is-centered">
+      
+      <!-- Transfer Results. -->
+      <div class="column">        
+        <div class="content">
+          <h3 class="title is-6">Transferring Datasets from Single-task Policies</h3>
+          <img src="./static/images/franka_image_pi0_performance.jpg" alt="Franka PI-0 Transfer Performance" style="max-width:70%; height:auto; display:block; margin:4px auto 8px auto;">
           <p>
-            In robot imitation learning, policy performance is tightly coupled with the quality and composition of the demonstration data. 
-            Yet developing a precise understanding of how individual demonstrations contribute to downstream outcomes – such as closed-loop task success or failure – remains a persistent challenge. 
-            We propose CUPID, a robot data curation method based on a novel influence function-theoretic formulation for imitation learning policies. 
-            Given a set of evaluation rollouts, CUPID estimates the influence of each training demonstration on the policy’s expected return. 
-            This enables ranking and selection of demonstrations according to their impact on the policy’s closed-loop performance. 
-            We use CUPID to curate data by 1) filtering out training demonstrations that harm policy performance and 2) subselecting newly collected trajectories that will most improve the policy. 
-            Extensive simulated and hardware experiments show that our approach consistently identifies which data drives test-time performance. 
-            For example, training with less than 33% of curated data can yield state-of-the-art diffusion policies on the simulated Robomimic benchmark, with similar gains observed in hardware. 
-            Furthermore, hardware experiments show that our method can identify robust strategies under distribution shift, isolate spurious correlations, and even enhance the post-training of generalist robot policies.
+            <strong>Add content.</strong>
           </p>
         </div>
       </div>
+
+      <!-- LoRA Results. -->
+      <div class="column">        
+        <div class="content">
+          <h3 class="title is-6">Curating Datasets for LoRA Fine-Tuned Weights</h3>
+          <img src="./static/images/franka_image_pi0_performance.jpg" alt="Franka PI-0 Transfer Performance" style="max-width:70%; height:auto; display:block; margin:4px auto 8px auto;">
+          <p>
+            <strong>Add content.</strong>
+          </p>
+        </div>
+      </div>
+
     </div>
-    <!--/ Abstract. -->
+
   </div>
 </section>
 
 
+
+<!-- Standard double column template -->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    
+    <!-- Diffusion Policy Rollouts. -->
+    <h2 class="title is-3">Diffusion Policy Rollouts</h2>
+
+    <!-- Diffusion Policy Figure-8 -->
+    <h3 class="title is-5">Figure-8</h3>
+    <div class="buttons has-addons is-centered mb-4">
+      <button class="toggle-button is-selected" onclick="switchSet('dp_figure8', 0)">Sample #1</button>
+      <button class="toggle-button" onclick="switchSet('dp_figure8', 1)">Sample #2</button>
+      <button class="toggle-button" onclick="switchSet('dp_figure8', 2)">Sample #3</button>
+    </div>
+    <div class="columns is-centered is-variable is-2">
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_figure8-video1" class="video-cropped figure8" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_figure8/set1/video1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_figure8-caption1" class="is-size-6 mt-2">All Demos</p>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_figure8-video2" class="video-cropped figure8" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_figure8/set1/video2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_figure8-caption2" class="is-size-6 mt-2">DemInf</p>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_figure8-video3" class="video-cropped figure8" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_figure8/set1/video3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_figure8-caption3" class="is-size-6 mt-2">CUPID</p>
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+
+    <!-- Diffusion Policy TuckBox -->
+    <h3 class="title is-5">TuckBox</h3>
+    <div class="buttons has-addons is-centered mb-4">
+      <button class="toggle-button is-selected" onclick="switchSet('dp_tuckbox', 0)">Sample #1</button>
+      <button class="toggle-button" onclick="switchSet('dp_tuckbox', 1)">Sample #2</button>
+      <button class="toggle-button" onclick="switchSet('dp_tuckbox', 2)">Sample #3</button>
+    </div>
+    <div class="columns is-centered is-variable is-2">
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_tuckbox-video1" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_tuckbox/set1/video1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_tuckbox-caption1" class="is-size-6 mt-2">All Demos</p>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_tuckbox-video2" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_tuckbox/set1/video2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_tuckbox-caption2" class="is-size-6 mt-2">DemInf</p>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_tuckbox-video3" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_tuckbox/set1/video3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_tuckbox-caption3" class="is-size-6 mt-2">CUPID</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diffusion Policy Bookshelf -->
+    <h3 class="title is-5">Bookshelf</h3>
+    <div class="buttons has-addons is-centered mb-4">
+      <button class="toggle-button is-selected" onclick="switchSet('dp_bookshelf', 0)">Sample #1</button>
+      <button class="toggle-button" onclick="switchSet('dp_bookshelf', 1)">Sample #2</button>
+      <button class="toggle-button" onclick="switchSet('dp_bookshelf', 2)">Sample #3</button>
+    </div>
+    <div class="columns is-centered is-variable is-2">
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_bookshelf-video1" class="video-cropped bookshelf" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_bookshelf/set1/video1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_bookshelf-caption1" class="is-size-6 mt-2">All Demos</p>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_bookshelf-video2" class="video-cropped bookshelf" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_bookshelf/set1/video2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_bookshelf-caption2" class="is-size-6 mt-2">DemInf</p>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_bookshelf-video3" class="video-cropped bookshelf" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_bookshelf/set1/video3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_bookshelf-caption3" class="is-size-6 mt-2">CUPID</p>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- PI-0 Rollouts. -->
+    <h2 class="title is-3">\( \mathbf{\pi_0} \) VLA Rollouts: </h2>
+    
+    <h3 class="title is-5">Figure-8</h3>
+
+    <h3 class="title is-5">TuckBox</h3>
+
+
   </div>
 </section>
 
 
-<section class="section">
+
+
+
+
+
+
+
+<!-- Standard double column template -->
+<!-- <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+    <div class="columns is-centered"> -->
 
       <!-- Content 1. -->
-      <div class="column">
+      <!-- <div class="column">
         <div class="content">
           <h2 class="title is-3">Content</h2>
           <p>
@@ -314,11 +538,11 @@
                     type="video/mp4">
           </video>
         </div>
-      </div>
+      </div> -->
       <!--/ Content 1. -->
 
       <!-- Content 2. -->
-      <div class="column">
+      <!-- <div class="column">
         <h2 class="title is-3">More Content</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -333,31 +557,39 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Content 2. -->
 
-  </div>
-</section>
+  <!-- </div>
+</section> -->
 
-<section class="section">
+
+<!-- Additional Robot Results. -->
+<section class="section experiments-block">
   <div class="container is-max-desktop">
 
+    <h2 class="title is-3">Additional Results</h2>
+    
+    <!-- Diffusion Policy Performance. -->
     <div class="columns is-centered">
-
-      <!-- Content 1. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Content</h2>
+          <h3 class="title is-5">What kinds of demonstrations does CUPID curate?</h3>
+          <img src="./static/images/franka_image_dp_distribution_filter_dataset_figure8.jpg" alt="Franka Diffusion Policy Figure-8 Distribution" style="max-width:100%; height:auto; display:block; margin-bottom:8px;">
+          <img src="./static/images/franka_image_dp_distribution_filter_dataset_tuckbox.jpg" alt="Franka Diffusion Policy TuckBox Distribution" style="max-width:100%; height:auto; display:block; margin-bottom:8px;">
+          <img src="./static/images/franka_image_dp_distribution_filter_dataset_bookshelf.jpg" alt="Franka Diffusion Policy Bookshelf Distribution" style="max-width:100%; height:auto; display:block; margin-bottom:8px;">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <strong>Franka real-world diffusion policy performance.</strong> 
+            CUPID, which curates demonstrations <em>w.r.t.</em> policy performance, improves success rates on mixed-quality datasets, identifies robust strategies, and disentangles 
+            spurious correlations that hinder performance. Although quality measures (e.g., DemInf, CUPID-Quality) help in mixed-quality settings (Figure-8), they degrade performance 
+            when higher-quality demonstrations induce brittle strategies at test time (TuckBox), or when quality is not the primary factor limiting policy success (Bookshelf). 
+            Overall, curating data based on performance (CUPID) maintains robustness across these settings. 
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
         </div>
       </div>
-      <!--/ Content 1. -->
+    </div>
+
+
 
   </div>
 </section>
@@ -398,6 +630,114 @@
     </div>
   </div>
 </footer>
+
+<!-- Toggle buttons. -->
+<script>
+  const videoSets = {
+    // Diffusion Policy Figure-8.
+    dp_figure8: [
+      {
+        sources: [
+          "./static/videos/dp_figure8/set1/video1.mp4", 
+          "./static/videos/dp_figure8/set1/video2.mp4", 
+          "./static/videos/dp_figure8/set1/video3.mp4"
+        ],
+        captions: ["All Demos", "DemInf", "CUPID"]
+      },
+      {
+        sources: [
+          "./static/videos/dp_figure8/set2/video1.mp4", 
+          "./static/videos/dp_figure8/set2/video2.mp4", 
+          "./static/videos/dp_figure8/set2/video3.mp4"
+        ],
+        captions: ["All Demos", "DemInf", "CUPID"]
+      },
+      {
+        sources: [
+          "./static/videos/dp_figure8/set3/video1.mp4", 
+          "./static/videos/dp_figure8/set3/video2.mp4", 
+          "./static/videos/dp_figure8/set3/video3.mp4"
+        ],
+        captions: ["All Demos", "DemInf", "CUPID"]
+      }
+    ],
+    
+    // Diffusion Policy TuckBox.
+    dp_tuckbox: [
+      {
+        sources: [
+          "./static/videos/dp_tuckbox/set1/video1.mp4", 
+          "./static/videos/dp_tuckbox/set1/video2.mp4", 
+          "./static/videos/dp_tuckbox/set1/video3.mp4"
+        ],
+        captions: ["All Demos", "DemInf", "CUPID"]
+      },
+      {
+        sources: [
+          "./static/videos/dp_tuckbox/set2/video1.mp4", 
+          "./static/videos/dp_tuckbox/set2/video2.mp4", 
+          "./static/videos/dp_tuckbox/set2/video3.mp4"
+        ],
+        captions: ["All Demos", "DemInf", "CUPID"]
+      },
+      {
+        sources: [
+          "./static/videos/dp_tuckbox/set3/video1.mp4", 
+          "./static/videos/dp_tuckbox/set3/video2.mp4", 
+          "./static/videos/dp_tuckbox/set3/video3.mp4"
+        ],
+        captions: ["All Demos", "DemInf", "CUPID"]
+      }
+    ],
+
+    // Diffusion Policy Bookshelf.
+    dp_bookshelf: [
+      {
+        sources: [
+          "./static/videos/dp_bookshelf/set1/video1.mp4", 
+          "./static/videos/dp_bookshelf/set1/video2.mp4", 
+          "./static/videos/dp_bookshelf/set1/video3.mp4"
+        ],
+        captions: ["All Demos", "DemInf", "CUPID"]
+      },
+      {
+        sources: [
+          "./static/videos/dp_bookshelf/set2/video1.mp4", 
+          "./static/videos/dp_bookshelf/set2/video2.mp4", 
+          "./static/videos/dp_bookshelf/set2/video3.mp4"
+        ],
+        captions: ["All Demos", "DemInf", "CUPID"]
+      },
+      {
+        sources: [
+          "./static/videos/dp_bookshelf/set3/video1.mp4", 
+          "./static/videos/dp_bookshelf/set3/video2.mp4", 
+          "./static/videos/dp_bookshelf/set3/video3.mp4"
+        ],
+        captions: ["All Demos", "DemInf", "CUPID"]
+      }
+    ]
+  };
+
+  function switchSet(taskId, setIndex) {
+    const set = videoSets[taskId][setIndex];
+    for (let i = 0; i < 3; i++) {
+      const video = document.getElementById(`${taskId}-video${i + 1}`);
+      const source = video.querySelector("source");
+      source.src = set.sources[i];
+      video.load();
+      document.getElementById(`${taskId}-caption${i + 1}`).innerText = set.captions[i];
+    }
+
+    // Update selected button styling only within the relevant button group
+    const buttonGroup = document.querySelectorAll(`[onclick^="switchSet('${taskId}'"]`);
+    buttonGroup.forEach((btn, idx) => {
+      btn.classList.toggle('is-selected', idx === setIndex);
+    });
+  }
+
+</script>
+
 
 </body>
 </html>
