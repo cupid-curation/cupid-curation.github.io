@@ -392,17 +392,17 @@
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_figure8-video1" class="video-cropped figure8" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_figure8/set1/video1.mp4" type="video/mp4">
+              <source src="./static/videos/dp_figure8/base1.mp4" type="video/mp4">
             </video>
           </div>
-          <p id="dp_figure8-caption1" class="is-size-6 mt-2">All Demos</p>
+          <p id="dp_figure8-caption1" class="is-size-6 mt-2">Base</p>
         </div>
       </div>
       <div class="column is-one-third">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_figure8-video2" class="video-cropped figure8" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_figure8/set1/video2.mp4" type="video/mp4">
+              <source src="./static/videos/dp_figure8/deminf1.mp4" type="video/mp4">
             </video>
           </div>
           <p id="dp_figure8-caption2" class="is-size-6 mt-2">DemInf</p>
@@ -412,7 +412,7 @@
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_figure8-video3" class="video-cropped figure8" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_figure8/set1/video3.mp4" type="video/mp4">
+              <source src="./static/videos/dp_figure8/cupid1.mp4" type="video/mp4">
             </video>
           </div>
           <p id="dp_figure8-caption3" class="is-size-6 mt-2">CUPID</p>
@@ -432,17 +432,17 @@
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_tuckbox-video1" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_tuckbox/set1/video1.mp4" type="video/mp4">
+              <source src="./static/videos/dp_tuckbox/base1.mp4" type="video/mp4">
             </video>
           </div>
-          <p id="dp_tuckbox-caption1" class="is-size-6 mt-2">All Demos</p>
+          <p id="dp_tuckbox-caption1" class="is-size-6 mt-2">Base</p>
         </div>
       </div>
       <div class="column is-one-third">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_tuckbox-video2" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_tuckbox/set1/video2.mp4" type="video/mp4">
+              <source src="./static/videos/dp_tuckbox/deminf1.mp4" type="video/mp4">
             </video>
           </div>
           <p id="dp_tuckbox-caption2" class="is-size-6 mt-2">DemInf</p>
@@ -452,7 +452,7 @@
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_tuckbox-video3" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_tuckbox/set1/video3.mp4" type="video/mp4">
+              <source src="./static/videos/dp_tuckbox/cupid1.mp4" type="video/mp4">
             </video>
           </div>
           <p id="dp_tuckbox-caption3" class="is-size-6 mt-2">CUPID</p>
@@ -472,17 +472,17 @@
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_bookshelf-video1" class="video-cropped bookshelf" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_bookshelf/set1/video1.mp4" type="video/mp4">
+              <source src="./static/videos/dp_bookshelf/base1.mp4" type="video/mp4">
             </video>
           </div>
-          <p id="dp_bookshelf-caption1" class="is-size-6 mt-2">All Demos</p>
+          <p id="dp_bookshelf-caption1" class="is-size-6 mt-2">Base</p>
         </div>
       </div>
       <div class="column is-one-third">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_bookshelf-video2" class="video-cropped bookshelf" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_bookshelf/set1/video2.mp4" type="video/mp4">
+              <source src="./static/videos/dp_bookshelf/deminf1.mp4" type="video/mp4">
             </video>
           </div>
           <p id="dp_bookshelf-caption2" class="is-size-6 mt-2">DemInf</p>
@@ -492,14 +492,13 @@
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_bookshelf-video3" class="video-cropped bookshelf" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_bookshelf/set1/video3.mp4" type="video/mp4">
+              <source src="./static/videos/dp_bookshelf/cupid1.mp4" type="video/mp4">
             </video>
           </div>
           <p id="dp_bookshelf-caption3" class="is-size-6 mt-2">CUPID</p>
         </div>
       </div>
     </div>
-
     
     <!-- PI-0 Rollouts. -->
     <h2 class="title is-3">\( \mathbf{\pi_0} \) VLA Rollouts: </h2>
@@ -511,11 +510,6 @@
 
   </div>
 </section>
-
-
-
-
-
 
 
 
@@ -633,60 +627,61 @@
 
 <!-- Toggle buttons. -->
 <script>
+  
   const videoSets = {
     // Diffusion Policy Figure-8.
     dp_figure8: [
       {
         sources: [
-          "./static/videos/dp_figure8/set1/video1.mp4", 
-          "./static/videos/dp_figure8/set1/video2.mp4", 
-          "./static/videos/dp_figure8/set1/video3.mp4"
+          "./static/videos/dp_figure8/base1.mp4", 
+          "./static/videos/dp_figure8/deminf1.mp4", 
+          "./static/videos/dp_figure8/cupid1.mp4"
         ],
-        captions: ["All Demos", "DemInf", "CUPID"]
+        captions: ["Base", "DemInf", "CUPID"]
       },
       {
         sources: [
-          "./static/videos/dp_figure8/set2/video1.mp4", 
-          "./static/videos/dp_figure8/set2/video2.mp4", 
-          "./static/videos/dp_figure8/set2/video3.mp4"
+          "./static/videos/dp_figure8/base2.mp4", 
+          "./static/videos/dp_figure8/deminf2.mp4", 
+          "./static/videos/dp_figure8/cupid2.mp4"
         ],
-        captions: ["All Demos", "DemInf", "CUPID"]
+        captions: ["Base", "DemInf", "CUPID"]
       },
       {
         sources: [
-          "./static/videos/dp_figure8/set3/video1.mp4", 
-          "./static/videos/dp_figure8/set3/video2.mp4", 
-          "./static/videos/dp_figure8/set3/video3.mp4"
+          "./static/videos/dp_figure8/base3.mp4", 
+          "./static/videos/dp_figure8/deminf3.mp4", 
+          "./static/videos/dp_figure8/cupid3.mp4"
         ],
-        captions: ["All Demos", "DemInf", "CUPID"]
+        captions: ["Base", "DemInf", "CUPID"]
       }
     ],
-    
+
     // Diffusion Policy TuckBox.
     dp_tuckbox: [
       {
         sources: [
-          "./static/videos/dp_tuckbox/set1/video1.mp4", 
-          "./static/videos/dp_tuckbox/set1/video2.mp4", 
-          "./static/videos/dp_tuckbox/set1/video3.mp4"
+          "./static/videos/dp_tuckbox/base1.mp4", 
+          "./static/videos/dp_tuckbox/deminf1.mp4", 
+          "./static/videos/dp_tuckbox/cupid1.mp4"
         ],
-        captions: ["All Demos", "DemInf", "CUPID"]
+        captions: ["Base", "DemInf", "CUPID"]
       },
       {
         sources: [
-          "./static/videos/dp_tuckbox/set2/video1.mp4", 
-          "./static/videos/dp_tuckbox/set2/video2.mp4", 
-          "./static/videos/dp_tuckbox/set2/video3.mp4"
+          "./static/videos/dp_tuckbox/base2.mp4", 
+          "./static/videos/dp_tuckbox/deminf2.mp4", 
+          "./static/videos/dp_tuckbox/cupid2.mp4"
         ],
-        captions: ["All Demos", "DemInf", "CUPID"]
+        captions: ["Base", "DemInf", "CUPID"]
       },
       {
         sources: [
-          "./static/videos/dp_tuckbox/set3/video1.mp4", 
-          "./static/videos/dp_tuckbox/set3/video2.mp4", 
-          "./static/videos/dp_tuckbox/set3/video3.mp4"
+          "./static/videos/dp_tuckbox/base3.mp4", 
+          "./static/videos/dp_tuckbox/deminf3.mp4", 
+          "./static/videos/dp_tuckbox/cupid3.mp4"
         ],
-        captions: ["All Demos", "DemInf", "CUPID"]
+        captions: ["Base", "DemInf", "CUPID"]
       }
     ],
 
@@ -694,27 +689,27 @@
     dp_bookshelf: [
       {
         sources: [
-          "./static/videos/dp_bookshelf/set1/video1.mp4", 
-          "./static/videos/dp_bookshelf/set1/video2.mp4", 
-          "./static/videos/dp_bookshelf/set1/video3.mp4"
+          "./static/videos/dp_bookshelf/base1.mp4", 
+          "./static/videos/dp_bookshelf/deminf1.mp4", 
+          "./static/videos/dp_bookshelf/cupid1.mp4"
         ],
-        captions: ["All Demos", "DemInf", "CUPID"]
+        captions: ["Base", "DemInf", "CUPID"]
       },
       {
         sources: [
-          "./static/videos/dp_bookshelf/set2/video1.mp4", 
-          "./static/videos/dp_bookshelf/set2/video2.mp4", 
-          "./static/videos/dp_bookshelf/set2/video3.mp4"
+          "./static/videos/dp_bookshelf/base2.mp4", 
+          "./static/videos/dp_bookshelf/deminf2.mp4", 
+          "./static/videos/dp_bookshelf/cupid2.mp4"
         ],
-        captions: ["All Demos", "DemInf", "CUPID"]
+        captions: ["Base", "DemInf", "CUPID"]
       },
       {
         sources: [
-          "./static/videos/dp_bookshelf/set3/video1.mp4", 
-          "./static/videos/dp_bookshelf/set3/video2.mp4", 
-          "./static/videos/dp_bookshelf/set3/video3.mp4"
+          "./static/videos/dp_bookshelf/base3.mp4", 
+          "./static/videos/dp_bookshelf/deminf3.mp4", 
+          "./static/videos/dp_bookshelf/cupid3.mp4"
         ],
-        captions: ["All Demos", "DemInf", "CUPID"]
+        captions: ["Base", "DemInf", "CUPID"]
       }
     ]
   };

@@ -255,9 +255,9 @@ body {
 
 .video-crop-container {
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
   position: relative;
 }
 
@@ -272,9 +272,9 @@ body {
 }
 
 .video-cropped.tuckbox {
-  object-position: center center;
+  object-position: center 100%;
 }
 
 .video-cropped.bookshelf {
-  object-position: center center;
+  object-position: center 0%;
 }
