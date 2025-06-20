@@ -186,11 +186,13 @@
 
 <!-- TLDR. -->
 <section class="tldr-section">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <div class="tldr-box">
       <h2 class="tldr-title">TL;DR</h2>
       <p class="tldr-text">
-        CUPID is a data curation method for robot imitation learning that uses influence functions to measure the causal impact of a demonstration on the policy's closed-loop performance. 
+        <strong>CUPID</strong> (<strong><span style="color:#d6731c;">CU</span></strong>rating <strong><span style="color:#d6731c;">P</span></strong>erformance-<strong><span style="color:#d6731c;">I</span></strong>nfluencing <strong><span style="color:#d6731c;">D</span></strong>emonstrations) 
+        is a data curation method for robot imitation learning that uses influence functions to estimate the causal impact of each demonstration on a policy’s closed-loop performance.
+        I.e., CUPID provides a principled way to (i) 🧹 filter existing training sets and (ii) 🎯 subselect helpful demos from new data.
       </p>
     </div>
   </div>
@@ -241,7 +243,8 @@
       <h2 class="title is-3">Approach</h2>
       <img src="./static/images/method.png" alt="CUPID Method Overview" style="max-width:100%; height:auto; display:block; margin:0 auto;">
       <h2 class="subtitle has-text-centered">
-        We propose a data curation method for robot imitation learning that uses influence functions to measure the causal impact of a demonstration on the policy's closed-loop performance.
+        <strong>Curation Overview.</strong> After estimating a BC policy's expected return from a set of rollouts, CUPID ranks demos based on their measured influence 
+        on this performance estimate and selects the top-k. Thus, curating with CUPID results in a dataset of demos that most strongly influences closed-loop success.
       </h2>
   </div>
 
@@ -262,65 +265,6 @@
 </section> -->
 
 
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
-
 <!-- Main Robot Results. -->
 <section class="section experiments-block">
   <!-- <div class="container is-max-desktop"> -->
@@ -329,6 +273,7 @@
     <h2 class="title is-3">Robot Experiments</h2>
     
     <!-- Diffusion Policy Performance. -->
+    <div style="margin-top: 2rem;"></div>
     <div class="content">
       <h3 class="title is-5">Improving Diffusion Policies by Debugging Training Data</h3>
       <img src="./static/images/franka_image_dp_performance.jpg" alt="Franka Diffusion Policy Performance" style="max-width:100%; height:auto; display:block; margin:0;">
@@ -343,6 +288,7 @@
     </div>
 
     <!-- PI-0 Transfer Performance. -->
+    <div style="margin-top: 3rem;"></div>
     <h3 class="title is-5">Curated Post-Training for Vision-Language-Action (VLA) Models</h3>
     <div class="columns is-centered">
       
@@ -373,10 +319,10 @@
   </div>
 </section>
 
-
+<hr>
 
 <!-- Standard double column template -->
-<section class="section">
+<section class="section experiments-block">
   <!-- <div class="container is-max-desktop"> -->
   <div class="container is-max-widescreen">
     
@@ -384,12 +330,8 @@
     <h2 class="title is-3">Diffusion Policy Rollouts</h2>
 
     <!-- Diffusion Policy Figure-8 -->
-    <h3 class="title is-5">Figure-8</h3>
-    <div class="buttons has-addons is-centered mb-4">
-      <button class="toggle-button is-selected" onclick="switchSet('dp_figure8', 0)">Sample #1</button>
-      <button class="toggle-button" onclick="switchSet('dp_figure8', 1)">Sample #2</button>
-      <button class="toggle-button" onclick="switchSet('dp_figure8', 2)">Sample #3</button>
-    </div>
+    <div style="margin-top: 2rem;"></div>
+    <h3 class="title is-5">Figure-8: Enter description of task</h3>
     <div class="columns is-centered is-variable is-2">
       <div class="column is-one-quarter">
         <div class="content has-text-centered">
@@ -432,14 +374,15 @@
         </div>
       </div>
     </div>
+    <div class="buttons has-addons is-centered mb-4">
+      <button class="toggle-button is-selected" onclick="switchSet('dp_figure8', 0)">Sample #1</button>
+      <button class="toggle-button" onclick="switchSet('dp_figure8', 1)">Sample #2</button>
+      <button class="toggle-button" onclick="switchSet('dp_figure8', 2)">Sample #3</button>
+    </div>
 
     <!-- Diffusion Policy TuckBox -->
-    <h3 class="title is-5">TuckBox</h3>
-    <div class="buttons has-addons is-centered mb-4">
-      <button class="toggle-button is-selected" onclick="switchSet('dp_tuckbox', 0)">Sample #1</button>
-      <button class="toggle-button" onclick="switchSet('dp_tuckbox', 1)">Sample #2</button>
-      <button class="toggle-button" onclick="switchSet('dp_tuckbox', 2)">Sample #3</button>
-    </div>
+    <div style="margin-top: 3rem;"></div>
+    <h3 class="title is-5">TuckBox: Enter description of task</h3>
     <div class="columns is-centered is-variable is-2">
       <div class="column is-one-quarter">
         <div class="content has-text-centered">
@@ -485,14 +428,15 @@
         </div>
       </div>
     </div>
+    <div class="buttons has-addons is-centered mb-4">
+      <button class="toggle-button is-selected" onclick="switchSet('dp_tuckbox', 0)">Sample #1</button>
+      <button class="toggle-button" onclick="switchSet('dp_tuckbox', 1)">Sample #2</button>
+      <button class="toggle-button" onclick="switchSet('dp_tuckbox', 2)">Sample #3</button>
+    </div>
 
     <!-- Diffusion Policy Bookshelf -->
-    <h3 class="title is-5">Bookshelf</h3>
-    <div class="buttons has-addons is-centered mb-4">
-      <button class="toggle-button is-selected" onclick="switchSet('dp_bookshelf', 0)">Sample #1</button>
-      <button class="toggle-button" onclick="switchSet('dp_bookshelf', 1)">Sample #2</button>
-      <button class="toggle-button" onclick="switchSet('dp_bookshelf', 2)">Sample #3</button>
-    </div>
+    <div style="margin-top: 3rem;"></div>
+    <h3 class="title is-5">Bookshelf: Enter description of task</h3>
     <div class="columns is-centered is-variable is-2">
       <div class="column is-one-quarter">
         <div class="content has-text-centered">
@@ -535,19 +479,22 @@
         </div>
       </div>
     </div>
+    <div class="buttons has-addons is-centered mb-4">
+      <button class="toggle-button is-selected" onclick="switchSet('dp_bookshelf', 0)">Sample #1</button>
+      <button class="toggle-button" onclick="switchSet('dp_bookshelf', 1)">Sample #2</button>
+      <button class="toggle-button" onclick="switchSet('dp_bookshelf', 2)">Sample #3</button>
+    </div>
 
     <!-- PI-0 Rollouts -->
+    <div style="margin-top: 6rem;"></div>
     <h2 class="title is-3">\( \mathbf{\pi_0} \) VLA Rollouts</h2>
 
     <!-- Shared row for both tasks -->
+    <div style="margin-top: 1rem;"></div>
     <div class="task-row">
       <!-- Figure-8 Task -->
       <div class="task-section">
-        <h3 class="title is-5 task-title">Figure-8</h3>
-        <div class="buttons has-addons mb-3">
-          <button class="toggle-button is-selected" onclick="switchPi0Set('pi0_figure8', 0)">Sample #1</button>
-          <button class="toggle-button" onclick="switchPi0Set('pi0_figure8', 1)">Sample #2</button>
-        </div>
+        <h3 class="title is-5 task-title">Figure-8: Enter description of task</h3>
         <div class="video-pair">
           <div class="video-column content has-text-centered">
             <div class="video-crop-container">
@@ -566,15 +513,15 @@
             <p id="pi0_figure8-caption2" class="is-size-6 mt-2">CUPID</p>
           </div>
         </div>
+        <div class="buttons has-addons mb-3">
+          <button class="toggle-button is-selected" onclick="switchPi0Set('pi0_figure8', 0)">Sample #1</button>
+          <button class="toggle-button" onclick="switchPi0Set('pi0_figure8', 1)">Sample #2</button>
+        </div>
       </div>
 
       <!-- TuckBox Task -->
       <div class="task-section">
-        <h3 class="title is-5 task-title">TuckBox</h3>
-        <div class="buttons has-addons mb-3">
-          <button class="toggle-button is-selected" onclick="switchPi0Set('pi0_tuckbox', 0)">Sample #1</button>
-          <button class="toggle-button" onclick="switchPi0Set('pi0_tuckbox', 1)">Sample #2</button>
-        </div>
+        <h3 class="title is-5 task-title">TuckBox: Enter description of task</h3>
         <div class="video-pair">
           <div class="video-column content has-text-centered">
             <div class="video-crop-container">
@@ -593,90 +540,60 @@
             <p id="pi0_tuckbox-caption2" class="is-size-6 mt-2">CUPID</p>
           </div>
         </div>
+        <div class="buttons has-addons mb-3">
+          <button class="toggle-button is-selected" onclick="switchPi0Set('pi0_tuckbox', 0)">Sample #1</button>
+          <button class="toggle-button" onclick="switchPi0Set('pi0_tuckbox', 1)">Sample #2</button>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
+<div style="margin-top: -2rem;"></div>
 
+<hr>
 
-<!-- Standard double column template -->
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered"> -->
-
-      <!-- Content 1. -->
-      <!-- <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Content</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div> -->
-      <!--/ Content 1. -->
-
-      <!-- Content 2. -->
-      <!-- <div class="column">
-        <h2 class="title is-3">More Content</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
-    <!--/ Content 2. -->
-
-  <!-- </div>
-</section> -->
-
-
-<!-- Additional Robot Results. -->
-<section class="section experiments-block">
+<!-- FAQ. -->
+<section class="section faq-block">
   <div class="container is-max-widescreen">
 
-    <h2 class="title is-3">Additional Results</h2>
-    
-    <!-- Diffusion Policy Performance. -->
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-5">What kinds of demonstrations does CUPID curate?</h3>
-          <img src="./static/images/franka_image_dp_distribution_filter_dataset_figure8.jpg" alt="Franka Diffusion Policy Figure-8 Distribution" style="max-width:100%; height:auto; display:block; margin-bottom:8px;">
-          <img src="./static/images/franka_image_dp_distribution_filter_dataset_tuckbox.jpg" alt="Franka Diffusion Policy TuckBox Distribution" style="max-width:100%; height:auto; display:block; margin-bottom:8px;">
-          <img src="./static/images/franka_image_dp_distribution_filter_dataset_bookshelf.jpg" alt="Franka Diffusion Policy Bookshelf Distribution" style="max-width:100%; height:auto; display:block; margin-bottom:8px;">
-          <p>
-            <strong>Franka real-world diffusion policy performance.</strong> 
-            CUPID, which curates demonstrations <em>w.r.t.</em> policy performance, improves success rates on mixed-quality datasets, identifies robust strategies, and disentangles 
-            spurious correlations that hinder performance. Although quality measures (e.g., DemInf, CUPID-Quality) help in mixed-quality settings (Figure-8), they degrade performance 
-            when higher-quality demonstrations induce brittle strategies at test time (TuckBox), or when quality is not the primary factor limiting policy success (Bookshelf). 
-            Overall, curating data based on performance (CUPID) maintains robustness across these settings. 
-          </p>
-        </div>
+    <h2 class="title is-3">Frequently Asked Questions</h2>
+
+    <!-- Q1 -->
+    <div class="faq-item">
+      <button class="collapsible">Q1: How can we intuitively understand what CUPID is doing?</button>
+      <div class="faq-content">
+        <p style="margin-bottom: 1rem;"><strong>Start answering.</strong></p>
+        <img src="./static/images/teaser.png" alt="CUPID Teaser" style="max-width:100%; height:auto; display:block; margin:0 auto;">
       </div>
     </div>
 
+    <!-- Q2 -->
+    <div class="faq-item">
+      <button class="collapsible">Q2: What kinds of demonstrations does CUPID curate?</button>
+      <div class="faq-content">
+        <p style="margin-bottom: 1rem;"><strong>Franka real-world diffusion policy performance.</strong> Add description.</p>
+        <img src="./static/images/franka_image_dp_distribution_filter_dataset_figure8.jpg" alt="Franka Diffusion Policy Figure-8 Distribution" style="max-width:100%; height:auto; display:block; margin-bottom:8px;">
+        <img src="./static/images/franka_image_dp_distribution_filter_dataset_tuckbox.jpg" alt="Franka Diffusion Policy TuckBox Distribution" style="max-width:100%; height:auto; display:block; margin-bottom:8px;">
+        <img src="./static/images/franka_image_dp_distribution_filter_dataset_bookshelf.jpg" alt="Franka Diffusion Policy Bookshelf Distribution" style="max-width:100%; height:auto; display:block; margin-bottom:8px;">
+      </div>
+    </div>
 
+    <!-- Q3 -->
+    <div class="faq-item">
+      <button class="collapsible">Q3: How many policy rollouts does CUPID need for effective curation?</button>
+      <div class="faq-content">
+        <p style="margin-bottom: 1rem;"><strong>RoboMimic ablation on the number of rollouts.</strong> Add description.</p>
+        <img src="./static/images/robomimic_image_data_quality_rollout_cupid.jpg" alt="RoboMimic Ablation on Number of Rollouts" style="max-width:100%; height:auto; display:block; margin-bottom:8px;">
+      </div>
+    </div>
 
   </div>
 </section>
 
 
 <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
+  <div class="container is-max-widescreen content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{agia2025cupid,
     author    = {Agia, Christopher and Sinha, Rohan and Yang, Jingyun and Antonova, Rika and Pavone, Marco and Nishimura, Haruki and Itkina, Masha and Bohg, Jeannette},
@@ -873,6 +790,22 @@
     }
   </script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const collapsibles = document.querySelectorAll(".collapsible");
+      collapsibles.forEach(btn => {
+        btn.addEventListener("click", function() {
+          this.classList.toggle("active");
+          const content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
