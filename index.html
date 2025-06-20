@@ -323,7 +323,9 @@
 
 <!-- Main Robot Results. -->
 <section class="section experiments-block">
-  <div class="container is-max-desktop">
+  <!-- <div class="container is-max-desktop"> -->
+  <div class="container is-max-widescreen">
+
     <h2 class="title is-3">Robot Experiments</h2>
     
     <!-- Diffusion Policy Performance. -->
@@ -375,7 +377,8 @@
 
 <!-- Standard double column template -->
 <section class="section">
-  <div class="container is-max-desktop">
+  <!-- <div class="container is-max-desktop"> -->
+  <div class="container is-max-widescreen">
     
     <!-- Diffusion Policy Rollouts. -->
     <h2 class="title is-3">Diffusion Policy Rollouts</h2>
@@ -388,7 +391,7 @@
       <button class="toggle-button" onclick="switchSet('dp_figure8', 2)">Sample #3</button>
     </div>
     <div class="columns is-centered is-variable is-2">
-      <div class="column is-one-third">
+      <div class="column is-one-quarter">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_figure8-video1" class="video-cropped figure8" autoplay muted loop playsinline controls>
@@ -398,24 +401,34 @@
           <p id="dp_figure8-caption1" class="is-size-6 mt-2">Base</p>
         </div>
       </div>
-      <div class="column is-one-third">
+      <div class="column is-one-quarter">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_figure8-video2" class="video-cropped figure8" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_figure8/deminf1.mp4" type="video/mp4">
+              <source src="./static/videos/dp_figure8/demoscore1.mp4" type="video/mp4">
             </video>
           </div>
-          <p id="dp_figure8-caption2" class="is-size-6 mt-2">DemInf</p>
+          <p id="dp_figure8-caption2" class="is-size-6 mt-2">Demo-SCORE</p>
         </div>
       </div>
-      <div class="column is-one-third">
+      <div class="column is-one-quarter">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_figure8-video3" class="video-cropped figure8" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_figure8/deminf1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_figure8-caption3" class="is-size-6 mt-2">DemInf</p>
+        </div>
+      </div>
+      <div class="column is-one-quarter">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_figure8-video4" class="video-cropped figure8" autoplay muted loop playsinline controls>
               <source src="./static/videos/dp_figure8/cupid1.mp4" type="video/mp4">
             </video>
           </div>
-          <p id="dp_figure8-caption3" class="is-size-6 mt-2">CUPID</p>
+          <p id="dp_figure8-caption4" class="is-size-6 mt-2">CUPID</p>
         </div>
       </div>
     </div>
@@ -428,7 +441,7 @@
       <button class="toggle-button" onclick="switchSet('dp_tuckbox', 2)">Sample #3</button>
     </div>
     <div class="columns is-centered is-variable is-2">
-      <div class="column is-one-third">
+      <div class="column is-one-quarter">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_tuckbox-video1" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
@@ -438,24 +451,37 @@
           <p id="dp_tuckbox-caption1" class="is-size-6 mt-2">Base</p>
         </div>
       </div>
-      <div class="column is-one-third">
+      <div class="column is-one-quarter">
         <div class="content has-text-centered">
           <div class="video-crop-container">
-            <video id="dp_tuckbox-video2" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_tuckbox/deminf1.mp4" type="video/mp4">
+            <!-- Hidden video (so JS works) -->
+            <video id="dp_tuckbox-video2" class="video-cropped tuckbox" autoplay muted loop playsinline controls style="display: none;">
+              <source src="" type="video/mp4">
             </video>
+            <!-- Placeholder div (same aspect and styling) -->
+            <div id="dp_tuckbox-placeholder2" class="video-cropped tuckbox placeholder-gray" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
           </div>
-          <p id="dp_tuckbox-caption2" class="is-size-6 mt-2">DemInf</p>
+          <p id="dp_tuckbox-caption2" class="is-size-6 mt-2">Demo-SCORE</p>
         </div>
       </div>
-      <div class="column is-one-third">
+      <div class="column is-one-quarter">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_tuckbox-video3" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_tuckbox/deminf1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_tuckbox-caption3" class="is-size-6 mt-2">DemInf</p>
+        </div>
+      </div>
+      <div class="column is-one-quarter">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_tuckbox-video4" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
               <source src="./static/videos/dp_tuckbox/cupid1.mp4" type="video/mp4">
             </video>
           </div>
-          <p id="dp_tuckbox-caption3" class="is-size-6 mt-2">CUPID</p>
+          <p id="dp_tuckbox-caption4" class="is-size-6 mt-2">CUPID</p>
         </div>
       </div>
     </div>
@@ -468,7 +494,7 @@
       <button class="toggle-button" onclick="switchSet('dp_bookshelf', 2)">Sample #3</button>
     </div>
     <div class="columns is-centered is-variable is-2">
-      <div class="column is-one-third">
+      <div class="column is-one-quarter">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_bookshelf-video1" class="video-cropped bookshelf" autoplay muted loop playsinline controls>
@@ -478,40 +504,100 @@
           <p id="dp_bookshelf-caption1" class="is-size-6 mt-2">Base</p>
         </div>
       </div>
-      <div class="column is-one-third">
+      <div class="column is-one-quarter">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_bookshelf-video2" class="video-cropped bookshelf" autoplay muted loop playsinline controls>
-              <source src="./static/videos/dp_bookshelf/deminf1.mp4" type="video/mp4">
+              <source src="./static/videos/dp_bookshelf/demoscore1.mp4" type="video/mp4">
             </video>
           </div>
-          <p id="dp_bookshelf-caption2" class="is-size-6 mt-2">DemInf</p>
+          <p id="dp_bookshelf-caption2" class="is-size-6 mt-2">Demo-SCORE</p>
         </div>
       </div>
-      <div class="column is-one-third">
+      <div class="column is-one-quarter">
         <div class="content has-text-centered">
           <div class="video-crop-container">
             <video id="dp_bookshelf-video3" class="video-cropped bookshelf" autoplay muted loop playsinline controls>
+              <source src="./static/videos/dp_bookshelf/deminf1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <p id="dp_bookshelf-caption3" class="is-size-6 mt-2">DemInf</p>
+        </div>
+      </div>
+      <div class="column is-one-quarter">
+        <div class="content has-text-centered">
+          <div class="video-crop-container">
+            <video id="dp_bookshelf-video4" class="video-cropped bookshelf" autoplay muted loop playsinline controls>
               <source src="./static/videos/dp_bookshelf/cupid1.mp4" type="video/mp4">
             </video>
           </div>
-          <p id="dp_bookshelf-caption3" class="is-size-6 mt-2">CUPID</p>
+          <p id="dp_bookshelf-caption4" class="is-size-6 mt-2">CUPID</p>
         </div>
       </div>
     </div>
-    
-    <!-- PI-0 Rollouts. -->
-    <h2 class="title is-3">\( \mathbf{\pi_0} \) VLA Rollouts: </h2>
-    
-    <h3 class="title is-5">Figure-8</h3>
 
-    <h3 class="title is-5">TuckBox</h3>
+    <!-- PI-0 Rollouts -->
+    <h2 class="title is-3">\( \mathbf{\pi_0} \) VLA Rollouts</h2>
 
+    <!-- Shared row for both tasks -->
+    <div class="task-row">
+      <!-- Figure-8 Task -->
+      <div class="task-section">
+        <h3 class="title is-5 task-title">Figure-8</h3>
+        <div class="buttons has-addons mb-3">
+          <button class="toggle-button is-selected" onclick="switchPi0Set('pi0_figure8', 0)">Sample #1</button>
+          <button class="toggle-button" onclick="switchPi0Set('pi0_figure8', 1)">Sample #2</button>
+        </div>
+        <div class="video-pair">
+          <div class="video-column content has-text-centered">
+            <div class="video-crop-container">
+              <video id="pi0_figure8-video1" class="video-cropped figure8" autoplay muted loop playsinline controls>
+                <source src="./static/videos/pi0_figure8/base1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p id="pi0_figure8-caption1" class="is-size-6 mt-2">Base</p>
+          </div>
+          <div class="video-column content has-text-centered">
+            <div class="video-crop-container">
+              <video id="pi0_figure8-video2" class="video-cropped figure8" autoplay muted loop playsinline controls>
+                <source src="./static/videos/pi0_figure8/cupid1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p id="pi0_figure8-caption2" class="is-size-6 mt-2">CUPID</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TuckBox Task -->
+      <div class="task-section">
+        <h3 class="title is-5 task-title">TuckBox</h3>
+        <div class="buttons has-addons mb-3">
+          <button class="toggle-button is-selected" onclick="switchPi0Set('pi0_tuckbox', 0)">Sample #1</button>
+          <button class="toggle-button" onclick="switchPi0Set('pi0_tuckbox', 1)">Sample #2</button>
+        </div>
+        <div class="video-pair">
+          <div class="video-column content has-text-centered">
+            <div class="video-crop-container">
+              <video id="pi0_tuckbox-video1" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
+                <source src="./static/videos/pi0_tuckbox/base1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p id="pi0_tuckbox-caption1" class="is-size-6 mt-2">Base</p>
+          </div>
+          <div class="video-column content has-text-centered">
+            <div class="video-crop-container">
+              <video id="pi0_tuckbox-video2" class="video-cropped tuckbox" autoplay muted loop playsinline controls>
+                <source src="./static/videos/pi0_tuckbox/cupid1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p id="pi0_tuckbox-caption2" class="is-size-6 mt-2">CUPID</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
-
-
 
 
 <!-- Standard double column template -->
@@ -560,7 +646,7 @@
 
 <!-- Additional Robot Results. -->
 <section class="section experiments-block">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
 
     <h2 class="title is-3">Additional Results</h2>
     
@@ -625,113 +711,167 @@
   </div>
 </footer>
 
-<!-- Toggle buttons. -->
-<script>
-  
-  const videoSets = {
-    // Diffusion Policy Figure-8.
-    dp_figure8: [
-      {
-        sources: [
-          "./static/videos/dp_figure8/base1.mp4", 
-          "./static/videos/dp_figure8/deminf1.mp4", 
-          "./static/videos/dp_figure8/cupid1.mp4"
-        ],
-        captions: ["Base", "DemInf", "CUPID"]
-      },
-      {
-        sources: [
-          "./static/videos/dp_figure8/base2.mp4", 
-          "./static/videos/dp_figure8/deminf2.mp4", 
-          "./static/videos/dp_figure8/cupid2.mp4"
-        ],
-        captions: ["Base", "DemInf", "CUPID"]
-      },
-      {
-        sources: [
-          "./static/videos/dp_figure8/base3.mp4", 
-          "./static/videos/dp_figure8/deminf3.mp4", 
-          "./static/videos/dp_figure8/cupid3.mp4"
-        ],
-        captions: ["Base", "DemInf", "CUPID"]
-      }
-    ],
+  <!-- Toggle buttons. -->
+  <script>
+    const videoSets = {
+      // Diffusion Policy Figure-8.
+      dp_figure8: [
+        {
+          sources: [
+            "./static/videos/dp_figure8/base1.mp4",
+            "./static/videos/dp_figure8/demoscore1.mp4",
+            "./static/videos/dp_figure8/deminf1.mp4",
+            "./static/videos/dp_figure8/cupid1.mp4"
+          ],
+          captions: ["Base", "Demo-SCORE", "DemInf", "CUPID"]
+        },
+        {
+          sources: [
+            "./static/videos/dp_figure8/base2.mp4",
+            "./static/videos/dp_figure8/demoscore2.mp4",
+            "./static/videos/dp_figure8/deminf2.mp4",
+            "./static/videos/dp_figure8/cupid2.mp4"
+          ],
+          captions: ["Base", "Demo-SCORE", "DemInf", "CUPID"]
+        },
+        {
+          sources: [
+            "./static/videos/dp_figure8/base3.mp4",
+            "./static/videos/dp_figure8/demoscore3.mp4",
+            "./static/videos/dp_figure8/deminf3.mp4",
+            "./static/videos/dp_figure8/cupid3.mp4"
+          ],
+          captions: ["Base", "Demo-SCORE", "DemInf", "CUPID"]
+        }
+      ],
 
-    // Diffusion Policy TuckBox.
-    dp_tuckbox: [
-      {
-        sources: [
-          "./static/videos/dp_tuckbox/base1.mp4", 
-          "./static/videos/dp_tuckbox/deminf1.mp4", 
-          "./static/videos/dp_tuckbox/cupid1.mp4"
-        ],
-        captions: ["Base", "DemInf", "CUPID"]
-      },
-      {
-        sources: [
-          "./static/videos/dp_tuckbox/base2.mp4", 
-          "./static/videos/dp_tuckbox/deminf2.mp4", 
-          "./static/videos/dp_tuckbox/cupid2.mp4"
-        ],
-        captions: ["Base", "DemInf", "CUPID"]
-      },
-      {
-        sources: [
-          "./static/videos/dp_tuckbox/base3.mp4", 
-          "./static/videos/dp_tuckbox/deminf3.mp4", 
-          "./static/videos/dp_tuckbox/cupid3.mp4"
-        ],
-        captions: ["Base", "DemInf", "CUPID"]
-      }
-    ],
+      // Diffusion Policy TuckBox.
+      dp_tuckbox: [
+        {
+          sources: [
+            "./static/videos/dp_tuckbox/base1.mp4",
+            null,  // Demo-SCORE not applicable
+            "./static/videos/dp_tuckbox/deminf1.mp4",
+            "./static/videos/dp_tuckbox/cupid1.mp4"
+          ],
+          captions: ["Base", "Demo-SCORE", "DemInf", "CUPID"]
+        },
+        {
+          sources: [
+            "./static/videos/dp_tuckbox/base2.mp4",
+            null,
+            "./static/videos/dp_tuckbox/deminf2.mp4",
+            "./static/videos/dp_tuckbox/cupid2.mp4"
+          ],
+          captions: ["Base", "Demo-SCORE", "DemInf", "CUPID"]
+        },
+        {
+          sources: [
+            "./static/videos/dp_tuckbox/base3.mp4",
+            null,
+            "./static/videos/dp_tuckbox/deminf3.mp4",
+            "./static/videos/dp_tuckbox/cupid3.mp4"
+          ],
+          captions: ["Base", "Demo-SCORE", "DemInf", "CUPID"]
+        }
+      ],
 
-    // Diffusion Policy Bookshelf.
-    dp_bookshelf: [
-      {
-        sources: [
-          "./static/videos/dp_bookshelf/base1.mp4", 
-          "./static/videos/dp_bookshelf/deminf1.mp4", 
-          "./static/videos/dp_bookshelf/cupid1.mp4"
-        ],
-        captions: ["Base", "DemInf", "CUPID"]
-      },
-      {
-        sources: [
-          "./static/videos/dp_bookshelf/base2.mp4", 
-          "./static/videos/dp_bookshelf/deminf2.mp4", 
-          "./static/videos/dp_bookshelf/cupid2.mp4"
-        ],
-        captions: ["Base", "DemInf", "CUPID"]
-      },
-      {
-        sources: [
-          "./static/videos/dp_bookshelf/base3.mp4", 
-          "./static/videos/dp_bookshelf/deminf3.mp4", 
-          "./static/videos/dp_bookshelf/cupid3.mp4"
-        ],
-        captions: ["Base", "DemInf", "CUPID"]
-      }
-    ]
-  };
+      // Diffusion Policy Bookshelf.
+      dp_bookshelf: [
+        {
+          sources: [
+            "./static/videos/dp_bookshelf/base1.mp4",
+            "./static/videos/dp_bookshelf/demoscore1.mp4",
+            "./static/videos/dp_bookshelf/deminf1.mp4",
+            "./static/videos/dp_bookshelf/cupid1.mp4"
+          ],
+          captions: ["Base", "Demo-SCORE", "DemInf", "CUPID"]
+        },
+        {
+          sources: [
+            "./static/videos/dp_bookshelf/base2.mp4",
+            "./static/videos/dp_bookshelf/demoscore2.mp4",
+            "./static/videos/dp_bookshelf/deminf2.mp4",
+            "./static/videos/dp_bookshelf/cupid2.mp4"
+          ],
+          captions: ["Base", "Demo-SCORE", "DemInf", "CUPID"]
+        },
+        {
+          sources: [
+            "./static/videos/dp_bookshelf/base3.mp4",
+            "./static/videos/dp_bookshelf/demoscore3.mp4",
+            "./static/videos/dp_bookshelf/deminf3.mp4",
+            "./static/videos/dp_bookshelf/cupid3.mp4"
+          ],
+          captions: ["Base", "Demo-SCORE", "DemInf", "CUPID"]
+        }
+      ]
+    };
 
-  function switchSet(taskId, setIndex) {
-    const set = videoSets[taskId][setIndex];
-    for (let i = 0; i < 3; i++) {
-      const video = document.getElementById(`${taskId}-video${i + 1}`);
-      const source = video.querySelector("source");
-      source.src = set.sources[i];
-      video.load();
-      document.getElementById(`${taskId}-caption${i + 1}`).innerText = set.captions[i];
+    function switchSet(taskId, setIndex) {
+      const set = videoSets[taskId][setIndex];
+      for (let i = 0; i < 4; i++) {
+        const video = document.getElementById(`${taskId}-video${i + 1}`);
+        const caption = document.getElementById(`${taskId}-caption${i + 1}`);
+        const source = video?.querySelector("source");
+
+        const src = set.sources[i];
+        caption.innerText = set.captions[i];
+
+        if (src === null) {
+          // Handle placeholder case
+          video.style.display = "none";
+          const placeholder = document.createElement("div");
+          placeholder.className = "video-crop-container placeholder-gray";
+          placeholder.id = `${taskId}-placeholder${i + 1}`;
+          video.parentElement.insertBefore(placeholder, video);
+        } else {
+          // Remove existing placeholder if present
+          const existing = document.getElementById(`${taskId}-placeholder${i + 1}`);
+          if (existing) existing.remove();
+
+          video.style.display = "block";
+          source.src = src;
+          video.load();
+        }
+      }
+
+      // Update button styling
+      const buttonGroup = document.querySelectorAll(`[onclick^="switchSet('${taskId}'"]`);
+      buttonGroup.forEach((btn, idx) => {
+        btn.classList.toggle('is-selected', idx === setIndex);
+      });
     }
+  </script>
 
-    // Update selected button styling only within the relevant button group
-    const buttonGroup = document.querySelectorAll(`[onclick^="switchSet('${taskId}'"]`);
-    buttonGroup.forEach((btn, idx) => {
-      btn.classList.toggle('is-selected', idx === setIndex);
-    });
-  }
+  <script>
+    const pi0VideoSets = {
+      pi0_figure8: [
+        ["./static/videos/pi0_figure8/base1.mp4", "./static/videos/pi0_figure8/cupid1.mp4"],
+        ["./static/videos/pi0_figure8/base2.mp4", "./static/videos/pi0_figure8/cupid2.mp4"]
+      ],
+      pi0_tuckbox: [
+        ["./static/videos/pi0_tuckbox/base1.mp4", "./static/videos/pi0_tuckbox/cupid1.mp4"],
+        ["./static/videos/pi0_tuckbox/base2.mp4", "./static/videos/pi0_tuckbox/cupid2.mp4"]
+      ]
+    };
 
-</script>
+    function switchPi0Set(taskId, setIndex) {
+      const sources = pi0VideoSets[taskId][setIndex];
+      for (let i = 0; i < sources.length; i++) {
+        const video = document.getElementById(`${taskId}-video${i + 1}`);
+        const source = video.querySelector("source");
+        source.src = sources[i];
+        video.load();
+      }
+
+      // Update selected button styling per task
+      const buttonGroup = document.querySelectorAll(`[onclick^="switchPi0Set('${taskId}'"]`);
+      buttonGroup.forEach((btn, idx) => {
+        btn.classList.toggle("is-selected", idx === setIndex);
+      });
+    }
+  </script>
 
 
 </body>
