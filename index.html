@@ -58,11 +58,11 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://www.chrisagia.com/">
+      <!-- <a class="navbar-item" href="https://www.chrisagia.com/">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
-      </a>
+      </a> -->
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
@@ -129,25 +129,26 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="./static/pdfs/CoRL_2025__CUPID.pdf"
+                  class="external-link button is-normal is-rounded is-dark"
+                  target="_blank" rel="noopener">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Coming soon!</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v="
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -155,7 +156,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/"
@@ -163,7 +164,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Here soon!</span>
                   </a>
               </span>
             </div>
@@ -243,7 +244,7 @@
       <h2 class="title is-3">Approach</h2>
       <img src="./static/images/method.png" alt="CUPID Method Overview" style="max-width:100%; height:auto; display:block; margin:0 auto;">
       <h2 class="subtitle has-text-centered">
-        <strong>Curation Overview.</strong> After estimating a BC policy's expected return from a set of rollouts, CUPID ranks demos based on their measured influence 
+        <strong>Curation Overview.</strong> Upon estimating a BC policy's expected return from a set of rollouts, CUPID ranks demos based on their measured influence 
         on this performance estimate and selects the top-k. Thus, curating with CUPID results in a dataset of demos that most strongly influences closed-loop success.
       </h2>
   </div>
@@ -284,16 +285,16 @@
         spurious correlations that hinder performance. Although quality measures (e.g., DemInf, CUPID-Quality) help in mixed-quality settings (Figure-8), they degrade performance 
         when higher-quality demonstrations induce brittle strategies at test time (TuckBox), or when quality is not the primary factor limiting policy success (Bookshelf). 
         Overall, curating data based on performance (CUPID) maintains robustness across these settings. 
+        All data curation methods are limited to using 25 policy rollouts. Success rates are averaged over 25 rollouts.
       </p>
     </div>
 
     <!-- PI-0 Transfer Performance. -->
     <div style="margin-top: 3rem;"></div>
     <h3 class="title is-5">Curated Post-Training for Vision-Language-Action (VLA) Models</h3>
-    <div class="columns is-centered">
-      
+    <!-- <div class="columns is-centered"> -->
       <!-- Transfer Results. -->
-      <div class="column">        
+      <!-- <div class="column">        
         <div class="content">
           <h3 class="title is-6">Transferring Datasets from Single-task Policies</h3>
           <img src="./static/images/franka_image_pi0_performance.jpg" alt="Franka PI-0 Transfer Performance" style="max-width:70%; height:auto; display:block; margin:4px auto 8px auto;">
@@ -301,10 +302,10 @@
             <strong>Add content.</strong>
           </p>
         </div>
-      </div>
+      </div> -->
 
       <!-- LoRA Results. -->
-      <div class="column">        
+      <!-- <div class="column">        
         <div class="content">
           <h3 class="title is-6">Curating Datasets for LoRA Fine-Tuned Weights</h3>
           <img src="./static/images/franka_image_pi0_performance.jpg" alt="Franka PI-0 Transfer Performance" style="max-width:70%; height:auto; display:block; margin:4px auto 8px auto;">
@@ -312,8 +313,37 @@
             <strong>Add content.</strong>
           </p>
         </div>
+      </div> -->
+    <!-- </div> -->
+
+    <div class="content" style="margin-top: 2rem;">
+
+      <h3 class="title is-6">Transferring Curated Datasets from Single-task Policies to Multi-task VLAs</h3>
+      <!-- Side-by-side images container -->
+      <div style="display: flex; gap: 3rem; justify-content: center; align-items: flex-start;">
+        
+        <!-- First image: 1/3 width -->
+        <img src="./static/images/franka_image_pi0_performance.jpg"
+            alt="Franka Performance"
+            style="width: 30%; height: auto; display: block;">
+
+        <!-- Second image: 2/3 width -->
+        <img src="./static/images/transfer.jpg"
+            alt="Transfer Performance"
+            style="width: 66%; height: auto; display: block;">
+
       </div>
 
+      <!-- Shared caption -->
+      <p class="has-text-centered" style="margin-top: 0.75rem;">
+        <strong>Franka real-world \( \mathbf{\pi_0} \) VLA performance.</strong> 
+        Data curated for single-task diffusion policies improves \( \mathbf{\pi_0} \) post-training performance.
+        This highlights a promising direction to alleviate the computational cost of CUPID in large-scale settings: 
+        use smaller, single-task policies to curate datasets for larger, multi-task VLAs.
+        The results also suggest that scaling the pre-training of VLAs does not inherently enable them to leverage 
+        their generalist knowledge to, e.g., <em>ignore</em> low-quality behaviors or brittle strategies in demonstration data. 
+        That is, data curation still appears important for VLA post-training. 
+      </p>
     </div>
 
   </div>
@@ -331,7 +361,7 @@
 
     <!-- Diffusion Policy Figure-8 -->
     <div style="margin-top: 2rem;"></div>
-    <h3 class="title is-5">Figure-8: Enter description of task</h3>
+    <h3 class="title is-5">Figure-8: Improving Policy Performance in Mixed-Quality Regimes</h3>
     <div class="columns is-centered is-variable is-2">
       <div class="column is-one-quarter">
         <div class="content has-text-centered">
@@ -382,7 +412,7 @@
 
     <!-- Diffusion Policy TuckBox -->
     <div style="margin-top: 3rem;"></div>
-    <h3 class="title is-5">TuckBox: Enter description of task</h3>
+    <h3 class="title is-5">TuckBox: Identifying Robust Test-Time Strategies from Policy Failures</h3>
     <div class="columns is-centered is-variable is-2">
       <div class="column is-one-quarter">
         <div class="content has-text-centered">
@@ -436,7 +466,7 @@
 
     <!-- Diffusion Policy Bookshelf -->
     <div style="margin-top: 3rem;"></div>
-    <h3 class="title is-5">Bookshelf: Enter description of task</h3>
+    <h3 class="title is-5">Bookshelf: Disentangling Spurious Correlations in Demonstration Data</h3>
     <div class="columns is-centered is-variable is-2">
       <div class="column is-one-quarter">
         <div class="content has-text-centered">
@@ -494,7 +524,7 @@
     <div class="task-row">
       <!-- Figure-8 Task -->
       <div class="task-section">
-        <h3 class="title is-5 task-title">Figure-8: Enter description of task</h3>
+        <h3 class="title is-5 task-title">Figure-8: VLA Performance in Mixed-Quality Regimes</h3>
         <div class="video-pair">
           <div class="video-column content has-text-centered">
             <div class="video-crop-container">
@@ -521,7 +551,7 @@
 
       <!-- TuckBox Task -->
       <div class="task-section">
-        <h3 class="title is-5 task-title">TuckBox: Enter description of task</h3>
+        <h3 class="title is-5 task-title">TuckBox: VLA Strategies under Test-time Distribution Shifts</h3>
         <div class="video-pair">
           <div class="video-column content has-text-centered">
             <div class="video-crop-container">
@@ -592,7 +622,7 @@
 </section>
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-widescreen content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{agia2025cupid,
@@ -602,7 +632,7 @@
     year      = {2025},
   }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
