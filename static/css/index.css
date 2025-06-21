@@ -178,6 +178,32 @@ body {
   overflow: hidden; /* prevent background from affecting other sections */
 }
 
+
+/* ============== Hero Color Gradient ============== */
+
+.bibtex-bg {
+  background: linear-gradient(
+    90deg,
+    #fb8b24 0%,
+    #ffffff 50%,
+    #4caf50 100%
+  );
+  filter: blur(30px);
+  opacity: 0.2;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+}
+
+.bibtex-section-with-bg {
+  position: relative;
+  overflow: hidden; /* prevent background from affecting other sections */
+  border-top: 0.5px solid #ddd;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
 /* ============== TLDR Section ============== */
 
 .tldr-section {
