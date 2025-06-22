@@ -202,10 +202,10 @@
       <h2 class="tldr-title">TL;DR</h2>
       <p class="tldr-text">
         <strong>CUPID</strong> (<strong>CU</strong>rating <strong>P</strong>erformance-<strong>I</strong>nfluencing <strong>D</strong>emonstrations)
-        is a data curation method for robot imitation learning that uses <span style="color:#E3862C;">influence functions</span> to estimate the causal impact of each demonstration on a policy’s closed-loop performance.
+        is a data curation method for robot imitation learning that uses <span style="color:#FF8C00;">influence functions</span> to estimate the causal impact of each demonstration on a policy’s closed-loop performance.
         I.e., CUPID provides a principled way to 
-          (i) 🧹 <span style="color:#76B34A;">filter existing training sets</span> and 
-          (ii) 🎯 <span style="color:#76B34A;">subselect helpful demos</span> from new data.
+          (i) 🧹 <span style="color:#66bd63;">filter existing training sets</span> and 
+          (ii) 🎯 <span style="color:#66bd63;">subselect helpful demos</span> from new data.
       </p>
     </div>
   </div>
@@ -572,7 +572,7 @@
 
       <!-- TuckBox Task -->
       <div class="task-section">
-        <h3 class="title is-5 task-title">TuckBox: VLA Strategies under Test-time Distribution Shifts</h3>
+        <h3 class="title is-5 task-title">TuckBox: VLA Strategies under Test-Time Distribution Shifts</h3>
         <div class="video-pair">
           <div class="video-column content has-text-centered">
             <div class="video-crop-container">
@@ -621,12 +621,12 @@
         <p style="margin-bottom: 2rem;">
           <strong>Intuitively, CUPID uses influence functions to predictively answer counterfactual questions</strong> about the effect of each demonstration on downstream policy performance. 
           For example, CUPID enables us to answer questions like <em>"How would my policy's expected return change if I upweighted - or by negating, downweighted - the loss on a demonstration during training?"</em> 
-          and it does so without needing to retrain any policies (i.e., predictively). An illustrative example of this is shown in the figure below, where we can see how answering such counterfactual 
+          - and it does so without needing to retrain any policies (i.e., predictively). An illustrative example of this is shown in the figure below, where we can see how answering such counterfactual 
           questions can help us understand which demonstrations are helpful or harmful to the policy's performance.
         </p>
         <img src="./static/images/teaser.jpg" alt="CUPID Teaser" style="max-width:100%; height:auto; display:block; margin:0 auto;">
         <p style="text-align: center;">
-          <strong>CUPID Overview:</strong> Predictively answering counterfactual questions about policy performance using influence functions.
+          <strong>CUPID Overview:</strong> Predictively answering counterfactual questions about downstream policy performance using influence functions.
         </p>
       </div>
     </div>

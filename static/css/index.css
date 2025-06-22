@@ -332,13 +332,13 @@ body {
 .task-row {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   margin-bottom: 3rem;
 }
 
 .task-section {
   flex: 1;
-  max-width: 48%;
+  max-width: 50%;
 }
 
 .task-title {
@@ -348,7 +348,7 @@ body {
 
 .video-pair {
   display: flex;
-  gap: 1.1rem;
+  gap: 1.0rem;
   justify-content: center;
 }
 
